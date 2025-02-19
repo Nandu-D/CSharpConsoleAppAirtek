@@ -14,12 +14,18 @@ public class OrderService : IOrderService
         JsonNode? jsonNode = null;
         try
         {
-            var jsonAsString = File.ReadAllText("coding-assigment-orders.json");
+            var assembly = Assembly.GetExecutingAssembly();
+            string jsonAsString;
+            using (Stream stream = assembly.GetManifestResourceStream("AirTek.coding-assigment-orders.json"))
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                jsonAsString = reader.ReadToEnd();
+            }
             jsonNode = JsonSerializer.Deserialize<JsonNode>(jsonAsString);
         }
         catch (Exception)
         {
-            Console.WriteLine("An error occurred when processing json file");
+            Console.WriteLine("\nAn error occurred when processing json file");
         }
 
         if (jsonNode != null)
