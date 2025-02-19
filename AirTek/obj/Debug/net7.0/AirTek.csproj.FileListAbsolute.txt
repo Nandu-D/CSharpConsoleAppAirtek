@@ -1,0 +1,16 @@
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/bin/Debug/net7.0/AirTek
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/bin/Debug/net7.0/AirTek.deps.json
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/bin/Debug/net7.0/AirTek.runtimeconfig.json
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/bin/Debug/net7.0/AirTek.dll
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/bin/Debug/net7.0/AirTek.pdb
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/obj/Debug/net7.0/AirTek.csproj.AssemblyReference.cache
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/obj/Debug/net7.0/AirTek.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/obj/Debug/net7.0/AirTek.AssemblyInfoInputs.cache
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/obj/Debug/net7.0/AirTek.AssemblyInfo.cs
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/obj/Debug/net7.0/AirTek.csproj.CoreCompileInputs.cache
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/obj/Debug/net7.0/AirTek.dll
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/obj/Debug/net7.0/refint/AirTek.dll
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/obj/Debug/net7.0/AirTek.pdb
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/obj/Debug/net7.0/AirTek.genruntimeconfig.cache
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/obj/Debug/net7.0/ref/AirTek.dll
+/Users/nandudharmapalan/Documents/Programming/AirTek/AirTek/bin/Debug/net7.0/coding-assigment-orders.json
