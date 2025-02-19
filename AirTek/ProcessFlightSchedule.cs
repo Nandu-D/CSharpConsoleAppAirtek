@@ -40,10 +40,13 @@ public class ProcessFlightSchedule
         }
 
         List<string> formattedOutputFlightScheduleList = new List<string>();
-        foreach (FlightSchedule flightSchedule in FlightSchedulesList)
+        if (FlightSchedulesList != null)
         {
-            string formattedOutputLine = $"Flight: {flightSchedule.FlightNumber}, departure: {flightSchedule.DepartureAirportCode}, arrival: {flightSchedule.DestinationAirportCode}, day: {flightSchedule.Day}";
-            formattedOutputFlightScheduleList.Add(formattedOutputLine);
+            foreach (FlightSchedule flightSchedule in FlightSchedulesList)
+            {
+                string formattedOutputLine = $"Flight: {flightSchedule.FlightNumber}, departure: {flightSchedule.DepartureAirportCode}, arrival: {flightSchedule.DestinationAirportCode}, day: {flightSchedule.Day}";
+                formattedOutputFlightScheduleList.Add(formattedOutputLine);
+            }
         }
         return formattedOutputFlightScheduleList;
     }

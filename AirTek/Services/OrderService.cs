@@ -11,26 +11,37 @@ public class OrderService : IOrderService
     {
         List<Order> orders = new List<Order>();
 
-        JsonNode jsonNode = null;
+        JsonNode? jsonNode = null;
         try
         {
             var jsonAsString = File.ReadAllText("coding-assigment-orders.json");
             jsonNode = JsonSerializer.Deserialize<JsonNode>(jsonAsString);
         }
-        catch (Exception e)
+        catch (Exception)
         {
             Console.WriteLine("An error occurred when processing json file");
         }
 
         if (jsonNode != null)
         {
-            foreach (KeyValuePair<string, JsonNode> kv in jsonNode.AsObject())
+            foreach (KeyValuePair<string, JsonNode?> kv in jsonNode.AsObject())
             {
                 string orderName = kv.Key;
-                JsonNode destinationObj = kv.Value.AsObject();
-                string destinationAirportCode = (string)destinationObj["destination"];
-
-                orders.Add(new Order(orderName, destinationAirportCode));
+                JsonNode? destinationObj;
+                string destinationAirportCode;
+                if (kv.Value != null)
+                {
+                    destinationObj = kv.Value.AsObject();
+                    if (destinationObj != null)
+                    {
+                        var destinationObjDestination = destinationObj["destination"];
+                        if (destinationObjDestination != null)
+                        {
+                            destinationAirportCode = destinationObjDestination.ToString();
+                            orders.Add(new Order(orderName, destinationAirportCode));
+                        }
+                    }
+                }
             }
         }
         return orders;

@@ -35,7 +35,7 @@ public class ProcessOrders
             List<string> outputList = new List<string>();
             foreach (Order order in OrdersList)
             {
-                FlightSchedule flightSchedule = order.ScheduledToBeOnFlight;
+                FlightSchedule? flightSchedule = order.ScheduledToBeOnFlight;
                 if (flightSchedule == null)
                 {
                     // No flight is scheduled for the order
@@ -88,7 +88,6 @@ public class ProcessOrders
             }
             else
             {
-                //var priorityQueue = new PriorityQueue<FlightSchedule, int>(Comparer<int>.Create((x,y)=>y.CompareTo(x)));
                 PriorityQueue<FlightSchedule, int> priorityQueue = new PriorityQueue<FlightSchedule, int>();
                 priorityQueue.Enqueue(flightSchedule, flightSchedule.Day);
                 flightsScheduleDestinationDictionary.Add(destinationAirportCode, priorityQueue);
